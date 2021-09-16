@@ -1,4 +1,6 @@
-# ![LOGO](sage.png) Sage Business Cloud Accounting - Accounts OIH Connector
+# ![LOGO](sage.png)
+
+# Sage Business Cloud Accounting - Accounts OIH Connector
 
 ## Description
 

@@ -1,0 +1,197 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "contact_payment": {
+                    "type": "object",
+                    "properties": {
+                        "transaction_type_id": {
+                            "type": "string",
+                            "description": "The transaction type of the payment"
+                        },
+                        "contact_id": {
+                            "type": "string",
+                            "description": "The contact of the payment"
+                        },
+                        "bank_account_id": {
+                            "type": "string",
+                            "description": "The bank account of the payment"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The date the payment was made"
+                        },
+                        "total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total amount of the payment"
+                        },
+                        "payment_method_id": {
+                            "type": "string",
+                            "description": "The ID of the Payment Method."
+                        },
+                        "net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net amount of the payment"
+                        },
+                        "tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax amount of the payment"
+                        },
+                        "currency_id": {
+                            "type": "string",
+                            "description": "The ID of the Currency."
+                        },
+                        "exchange_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The exchange rate of the payment"
+                        },
+                        "base_currency_net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net amount of the payment in base currency"
+                        },
+                        "base_currency_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax amount of the payment in base currency"
+                        },
+                        "base_currency_total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total amount of the payment in base currency"
+                        },
+                        "base_currency_currency_charge": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The currency conversion charges in base currency"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "description": "A reference for the payment"
+                        },
+                        "tax_rate_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Rate."
+                        },
+                        "allocated_artefacts": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "artefact_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Artefact."
+                                    },
+                                    "amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The allocated amount"
+                                    },
+                                    "discount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The allocated discount"
+                                    }
+                                }
+                            }
+                        },
+                        "payment_on_account": {
+                            "type": "object",
+                            "properties": {
+                                "contact_name": {
+                                    "type": "string",
+                                    "description": "The name of the contact when the payment on account was created"
+                                },
+                                "contact_reference": {
+                                    "type": "string",
+                                    "description": "The reference of the contact when the payment on account was created"
+                                },
+                                "contact_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Contact."
+                                },
+                                "date": {
+                                    "type": "string",
+                                    "format": "date",
+                                    "description": "The date of the payment on account"
+                                },
+                                "reference": {
+                                    "type": "string",
+                                    "description": "The reference for the payment on account"
+                                },
+                                "net_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The net amount of the payment on account"
+                                },
+                                "tax_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The tax amount of the payment on account"
+                                },
+                                "total_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The total amount of the payment on account"
+                                },
+                                "outstanding_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The outstanding amount of the payment on account"
+                                },
+                                "currency_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Currency."
+                                },
+                                "exchange_rate": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The exchange rate for the payment on account"
+                                },
+                                "base_currency_net_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The net amount of the payment on account in base currency"
+                                },
+                                "base_currency_tax_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The tax amount of the payment on account in base currency"
+                                },
+                                "base_currency_total_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The total amount of the payment on account in base currency"
+                                },
+                                "base_currency_outstanding_amount": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The outstanding amount of the payment on account in base currency"
+                                },
+                                "status_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Status."
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "contact_payment"
+            ],
+            "description": "Updates a Contact Payment"
+        }
+    }
+}

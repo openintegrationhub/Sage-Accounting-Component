@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "hosted_artefact_payment_setting": {
+                    "type": "object",
+                    "properties": {
+                        "object_guid": {
+                            "type": "string",
+                            "description": "The sageone_guid of the object you are disabling card payments for."
+                        },
+                        "disable_payment": {
+                            "type": "boolean",
+                            "description": "The flag to disable online payments."
+                        }
+                    }
+                }
+            },
+            "required": [
+                "hosted_artefact_payment_setting"
+            ],
+            "description": "Creates a Hosted Artefact Payment Setting"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "contact_id": {
+            "required": false,
+            "type": "string"
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        },
+        "attributes": {
+            "required": false,
+            "type": "string"
+        },
+        "items_per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "maximum": 200,
+            "default": 20
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+        }
+    }
+}

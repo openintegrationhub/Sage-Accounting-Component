@@ -1,0 +1,121 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "ledger_account": {
+                    "type": "object",
+                    "properties": {
+                        "ledger_account_type_id": {
+                            "type": "string",
+                            "description": "The ledger account type for the ledger account"
+                        },
+                        "included_in_chart": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is included in the chart of accounts"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The name for the ledger account.\n\nChanges to this field do not propagate to other resources, namely not to the name of the associated\nbank_account (unlike the behaviour of the UI).\n"
+                        },
+                        "display_name": {
+                            "type": "string",
+                            "description": "The display name for the ledger account"
+                        },
+                        "nominal_code": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The nominal code of the ledger account",
+                            "minimum": 1,
+                            "maximum": 99999999
+                        },
+                        "ledger_account_classification_id": {
+                            "type": "string",
+                            "description": "The ID of the Ledger Account Classification."
+                        },
+                        "tax_rate_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Rate."
+                        },
+                        "fixed_tax_rate": {
+                            "type": "boolean",
+                            "description": "Indicates whether the default tax rate is fixed or may be changed per transaction"
+                        },
+                        "visible_in_banking": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the banking area of the application"
+                        },
+                        "visible_in_expenses": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the purchases area of the application"
+                        },
+                        "visible_in_journals": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the journals area of the application"
+                        },
+                        "visible_in_other_payments": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the other payments area of the application\n"
+                        },
+                        "visible_in_other_receipts": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the other receipts area of the application\n"
+                        },
+                        "visible_in_reporting": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the reporting area of the application"
+                        },
+                        "visible_in_sales": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is displayed in the sales area of the application"
+                        },
+                        "control_name": {
+                            "type": "string",
+                            "description": "The control name for the ledger account.\n\nThis is used internally by Accounting to identify the correct ledger account for booking taxes etc.\nYou cannot add ledger accounts with control name and you cannot modify the control name of existing\nledger accounts.\n"
+                        },
+                        "tax_recoverable": {
+                            "type": "boolean",
+                            "description": "Indicates that transactions posted to this ledger account have part recoverable taxes (Canada only)\n"
+                        },
+                        "recoverable_percentage": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The partial recoverable tax rate (Canada only)"
+                        },
+                        "non_recoverable_ledger_account_id": {
+                            "type": "string",
+                            "description": "The ID of the Non Recoverable Ledger Account."
+                        },
+                        "cis_materials": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is flagged for CIS Materials"
+                        },
+                        "cis_labour": {
+                            "type": "boolean",
+                            "description": "Indicates whether the ledger account is flagged for CIS Labour"
+                        },
+                        "gifi_code": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The GIFI code of the ledger account.\n\nGIFI is short for The General Index of Financial Information and it lets the CRA validate tax information electronically instead of manually.\nInformation from financial statements is categorized under the appropriate 4-digit-long GIFI code and entered on corporate income tax returns.\nGIFI is needed when filing a T2 income tax return.\n\n_Canada only_\n",
+                            "minimum": 1000,
+                            "maximum": 9999
+                        }
+                    },
+                    "required": [
+                        "ledger_account_type_id",
+                        "included_in_chart",
+                        "name",
+                        "display_name",
+                        "nominal_code"
+                    ]
+                }
+            },
+            "required": [
+                "ledger_account"
+            ],
+            "description": "Creates a Ledger Account"
+        }
+    }
+}

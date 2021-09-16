@@ -1,0 +1,96 @@
+{
+    "type": "object",
+    "properties": {
+        "updated_or_created_since": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "visible_in": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "sales",
+                "banking",
+                "expenses",
+                "other_payments",
+                "other_receipts",
+                "journals",
+                "reporting"
+            ]
+        },
+        "not_visible_in": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "sales",
+                "banking",
+                "expenses",
+                "other_payments",
+                "other_receipts",
+                "journals",
+                "reporting"
+            ]
+        },
+        "show_included_in_chart": {
+            "required": false,
+            "type": "boolean"
+        },
+        "show_control_accounts": {
+            "required": false,
+            "type": "boolean"
+        },
+        "ledger_account_classification_id": {
+            "required": false,
+            "type": "string"
+        },
+        "show_balance_details": {
+            "required": false,
+            "type": "boolean"
+        },
+        "exclude_deleted_entries": {
+            "required": false,
+            "type": "boolean"
+        },
+        "from_date": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "to_date": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "search": {
+            "required": false,
+            "type": "string"
+        },
+        "sort_order_from_user_setting": {
+            "required": false,
+            "type": "boolean"
+        },
+        "items_per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "maximum": 200,
+            "default": 20
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+        },
+        "attributes": {
+            "required": false,
+            "type": "string"
+        },
+        "ledger_account_type_id": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

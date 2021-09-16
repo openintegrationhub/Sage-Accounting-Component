@@ -1,0 +1,139 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "migration_tax_return": {
+                    "type": "object",
+                    "properties": {
+                        "from_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The start date of the tax return"
+                        },
+                        "to_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The end date of the tax return"
+                        },
+                        "total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total of the tax return"
+                        },
+                        "tax_return_frequency_id": {
+                            "type": "string",
+                            "description": "The tax return submission frequency"
+                        },
+                        "gb": {
+                            "type": "object",
+                            "properties": {
+                                "box_1": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 1"
+                                },
+                                "box_2": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 2"
+                                },
+                                "box_3": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 3"
+                                },
+                                "box_4": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 4"
+                                },
+                                "box_5": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 5"
+                                },
+                                "box_6": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 6"
+                                },
+                                "box_7": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 7"
+                                },
+                                "box_8": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 8"
+                                },
+                                "box_9": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box 9"
+                                }
+                            }
+                        },
+                        "ie": {
+                            "type": "object",
+                            "properties": {
+                                "box_T1": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box T1"
+                                },
+                                "box_T2": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box T2"
+                                },
+                                "box_T3": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box T3"
+                                },
+                                "box_T4": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box T4"
+                                },
+                                "box_E1": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box E1"
+                                },
+                                "box_E2": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box E2"
+                                },
+                                "box_ES1": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box ES1"
+                                },
+                                "box_ES2": {
+                                    "type": "number",
+                                    "format": "double",
+                                    "description": "The value of box ES2"
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "from_date",
+                        "to_date",
+                        "total_amount",
+                        "tax_return_frequency_id"
+                    ]
+                }
+            },
+            "required": [
+                "migration_tax_return"
+            ],
+            "description": "Creates a Migration Tax Return"
+        }
+    }
+}

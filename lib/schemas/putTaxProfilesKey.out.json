@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "tax_profile": {
+                    "type": "object",
+                    "properties": {
+                        "tax_type_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Type."
+                        },
+                        "tax_number": {
+                            "type": "string",
+                            "description": "The tax number"
+                        },
+                        "tax_number_suffix": {
+                            "type": "string",
+                            "description": "The tax number suffix"
+                        },
+                        "collect_tax": {
+                            "type": "boolean",
+                            "description": "Indicates whether tax is collected for this tax type"
+                        },
+                        "tax_return_frequency_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Return Frequency."
+                        },
+                        "address_region": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "description": "The name of the address region"
+                                },
+                                "code": {
+                                    "type": "string",
+                                    "description": "The code of the address region"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "tax_profile"
+            ],
+            "description": "Updates a Tax Profile"
+        }
+    }
+}

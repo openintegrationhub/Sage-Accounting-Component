@@ -1,0 +1,66 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "contact_person": {
+                    "type": "object",
+                    "properties": {
+                        "address_id": {
+                            "type": "string",
+                            "description": "The address of the contact person"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the contact person"
+                        },
+                        "contact_person_type_ids": {
+                            "type": "array",
+                            "description": "The IDs of the Contact Person Types.",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "job_title": {
+                            "type": "string",
+                            "description": "The job title of the contact person"
+                        },
+                        "telephone": {
+                            "type": "string",
+                            "description": "The telephone number of the contact person"
+                        },
+                        "mobile": {
+                            "type": "string",
+                            "description": "The mobile number of the contact person"
+                        },
+                        "email": {
+                            "type": "string",
+                            "description": "The email address of the contact person"
+                        },
+                        "fax": {
+                            "type": "string",
+                            "description": "The fax number of the contact person"
+                        },
+                        "is_main_contact": {
+                            "type": "boolean",
+                            "description": "Indicates whether this is the main contact person. Per contact, only one main contact can be selected."
+                        },
+                        "is_preferred_contact": {
+                            "type": "boolean",
+                            "description": "Indicates whether this contact person is a preferred contact"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "contact_person"
+            ],
+            "description": "Updates a Contact Person"
+        }
+    }
+}

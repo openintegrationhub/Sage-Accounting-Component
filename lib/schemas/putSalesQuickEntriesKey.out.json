@@ -1,0 +1,116 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "sales_quick_entry": {
+                    "type": "object",
+                    "properties": {
+                        "quick_entry_type_id": {
+                            "type": "string",
+                            "description": "The type of quick entry e.g. invoice or credit note"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The date of the quick entry"
+                        },
+                        "contact_id": {
+                            "type": "string",
+                            "description": "The contact the quick entry relates to"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "description": "The reference for the quick entry"
+                        },
+                        "ledger_account_id": {
+                            "type": "string",
+                            "description": "The associated ledger account"
+                        },
+                        "contact_name": {
+                            "type": "string",
+                            "description": "The name of the contact when the quick entry was created"
+                        },
+                        "contact_reference": {
+                            "type": "string",
+                            "description": "The reference of the contact when the quick entry was created"
+                        },
+                        "details": {
+                            "type": "string",
+                            "description": "A description of the quick entry"
+                        },
+                        "net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net amount of the quick entry"
+                        },
+                        "tax_rate_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Rate."
+                        },
+                        "tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax amount of the quick entry"
+                        },
+                        "total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total amount of the quick entry"
+                        },
+                        "currency_id": {
+                            "type": "string",
+                            "description": "The ID of the Currency."
+                        },
+                        "exchange_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The exchange rate for the quick entry"
+                        },
+                        "inverse_exchange_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The inverse exchange rate for the quick entry"
+                        },
+                        "base_currency_net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net amount of the quick entry in base currency"
+                        },
+                        "base_currency_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax amount of the quick entry in base currency"
+                        },
+                        "base_currency_total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total amount of the quick entry in base currency"
+                        },
+                        "status_id": {
+                            "type": "string",
+                            "description": "The ID of the Status."
+                        },
+                        "tax_address_region_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Address Region. (Canada only)"
+                        },
+                        "trade_of_asset": {
+                            "type": "boolean",
+                            "description": "Whether the quick entry is marked as trade of asset."
+                        }
+                    }
+                }
+            },
+            "required": [
+                "sales_quick_entry"
+            ],
+            "description": "Updates a Sales Quick Entry"
+        }
+    }
+}

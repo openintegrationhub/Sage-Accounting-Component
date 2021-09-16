@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "journal_code": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the journal code"
+                        },
+                        "code": {
+                            "type": "string",
+                            "description": "The code of the journal code"
+                        },
+                        "journal_code_type_id": {
+                            "type": "string",
+                            "description": "The journal code type of the journal code"
+                        },
+                        "control_name": {
+                            "type": "string",
+                            "description": "The control name of the journal code\n\nControl names are identifiers for a journal codes with a specific meaning. Some examples are `AC` for\npurchases, `VE` for sales, `OD` for other transactions and `REPBAL` for opening balances.\n"
+                        },
+                        "reserved": {
+                            "type": "boolean",
+                            "description": "Indicates whether the journal code is reserved.\n\nReserved journal codes cannot be deleted. A journal code is reserved when it has a control name.\nPlease note that journal codes can also not be deleted when there is any journal that is using\nthe code.\n"
+                        }
+                    },
+                    "required": [
+                        "name",
+                        "code",
+                        "journal_code_type_id"
+                    ]
+                }
+            },
+            "required": [
+                "journal_code"
+            ],
+            "description": "Creates a Journal Code"
+        }
+    }
+}

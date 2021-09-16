@@ -1,0 +1,106 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "financial_settings": {
+                    "type": "object",
+                    "properties": {
+                        "year_end_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The financial year end date of the business"
+                        },
+                        "year_end_lockdown_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The year end lockdown date of the business"
+                        },
+                        "accounting_type": {
+                            "type": "string",
+                            "description": "Indicates the accounting type of a business, it can be accrual or cash based"
+                        },
+                        "accounts_start_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The accounts start date of the business"
+                        },
+                        "base_currency_id": {
+                            "type": "string",
+                            "description": "The ID of the Base Currency."
+                        },
+                        "multi_currency_enabled": {
+                            "type": "boolean",
+                            "description": "Indicates whether multi-currency is enabled for the business"
+                        },
+                        "use_live_exchange_rates": {
+                            "type": "boolean",
+                            "description": "Indicates whether to use live or business defined exchange rates"
+                        },
+                        "mtd_activation_status": {
+                            "type": "string",
+                            "description": "Indicates the UK Making Tax Digital for VAT activation status"
+                        },
+                        "mtd_connected": {
+                            "type": "boolean",
+                            "description": "Indicates whether UK Making Tax Digital for VAT is currently connected"
+                        },
+                        "mtd_authenticated_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "Indicates when a UK business enabled UK Making Tax Digital for VAT, nil if not enabled or non-uk"
+                        },
+                        "tax_scheme_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Scheme."
+                        },
+                        "tax_return_frequency_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Return Frequency."
+                        },
+                        "tax_number": {
+                            "type": "string",
+                            "description": "The tax number"
+                        },
+                        "general_tax_number": {
+                            "type": "string",
+                            "description": "The number for various tax report submissions"
+                        },
+                        "tax_office_id": {
+                            "type": "string",
+                            "description": "The ID of the Tax Office."
+                        },
+                        "default_irpf_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The default IRPF rate"
+                        },
+                        "flat_rate_tax_percentage": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax percentage that applies to flat rate tax schemes."
+                        },
+                        "recoverable_percentage": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The partial recoverable tax rate (Canada only)"
+                        },
+                        "sales_tax_calculation": {
+                            "type": "string",
+                            "description": "The method of collection for tax on sales. Allowed values - \"invoice\", \"cash\"."
+                        },
+                        "purchase_tax_calculation": {
+                            "type": "string",
+                            "description": "The method of collection for tax on purchases. Allowed values - \"invoice\", \"cash\"."
+                        }
+                    }
+                }
+            },
+            "required": [
+                "financial_settings"
+            ],
+            "description": "Updates a Financial Settings"
+        }
+    }
+}

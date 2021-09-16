@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "service_rate_type": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the service rate type"
+                        },
+                        "active": {
+                            "type": "boolean",
+                            "description": "Indicates whether the rate type is displayed in the application"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "service_rate_type"
+            ],
+            "description": "Updates a Service Rate Type"
+        }
+    }
+}

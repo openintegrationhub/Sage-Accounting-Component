@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "bank_deposit": {
+                    "type": "object",
+                    "properties": {
+                        "from_bank_account_id": {
+                            "type": "string",
+                            "description": "From bank account - money leaves this account"
+                        },
+                        "to_bank_account_id": {
+                            "type": "string",
+                            "description": "To bank account - money goes into this account"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "User generated date of transaction, not necessarily when it was created"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "description": "Reference"
+                        },
+                        "cash_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "Cash total in the deposit"
+                        },
+                        "cheque_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "Cheque total in the deposit"
+                        },
+                        "total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "Total of cash and cheques in the deposit"
+                        }
+                    },
+                    "required": [
+                        "from_bank_account_id",
+                        "to_bank_account_id",
+                        "date",
+                        "reference",
+                        "cash_amount"
+                    ]
+                }
+            },
+            "required": [
+                "bank_deposit"
+            ],
+            "description": "Creates a Bank Deposit"
+        }
+    }
+}

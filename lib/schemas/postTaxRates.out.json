@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "tax_rate": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "The name of the tax rate"
+                        },
+                        "agency": {
+                            "type": "string",
+                            "description": "The agency name (US Only)"
+                        },
+                        "is_visible": {
+                            "type": "boolean",
+                            "description": "Indicates whether the tax rate is visible in the application"
+                        },
+                        "component_tax_rate": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "The name of the tax rate"
+                                    },
+                                    "agency": {
+                                        "type": "string",
+                                        "description": "The agency name (US Only)"
+                                    },
+                                    "percentage": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The tax rate percentage"
+                                    }
+                                },
+                                "required": [
+                                    "name"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "name"
+                    ]
+                }
+            },
+            "required": [
+                "tax_rate"
+            ],
+            "description": "Creates a Tax Rate (US only)"
+        }
+    }
+}

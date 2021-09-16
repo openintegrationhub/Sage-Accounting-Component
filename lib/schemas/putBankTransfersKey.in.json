@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "bank_transfer": {
+                    "type": "object",
+                    "properties": {
+                        "from_bank_account_id": {
+                            "type": "string",
+                            "description": "The bank account that the money was transfered from"
+                        },
+                        "to_bank_account_id": {
+                            "type": "string",
+                            "description": "The bank account that the money was transfered to"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The date of the bank transfer"
+                        },
+                        "amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The amount of the bank transfer"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "description": "The reference for the bank transfer"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "The description for the bank transfer"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "bank_transfer"
+            ],
+            "description": "Updates a Bank Transfer"
+        }
+    }
+}

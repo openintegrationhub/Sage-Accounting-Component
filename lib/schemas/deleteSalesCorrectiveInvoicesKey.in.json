@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "void_reason": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

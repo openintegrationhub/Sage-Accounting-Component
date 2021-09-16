@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "show_payments_allocations": {
+            "required": false,
+            "type": "boolean"
+        },
+        "show_corrections": {
+            "required": false,
+            "type": "boolean"
+        },
+        "nested_attributes": {
+            "required": false,
+            "type": "string"
+        },
+        "mark_as_sent": {
+            "required": false,
+            "type": "boolean"
+        },
+        "show_recurring_invoice": {
+            "required": false,
+            "type": "boolean"
+        },
+        "attributes": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

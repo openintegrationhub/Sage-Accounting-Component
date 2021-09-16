@@ -1,0 +1,101 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "product": {
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "type": "string",
+                            "description": "The product description"
+                        },
+                        "sales_ledger_account_id": {
+                            "type": "string",
+                            "description": "The sales ledger account for the product"
+                        },
+                        "purchase_ledger_account_id": {
+                            "type": "string",
+                            "description": "The purchase ledger account for the product"
+                        },
+                        "item_code": {
+                            "type": "string",
+                            "description": "The item code for the product"
+                        },
+                        "notes": {
+                            "type": "string",
+                            "description": "The notes for the product"
+                        },
+                        "sales_tax_rate_id": {
+                            "type": "string",
+                            "description": "The ID of the Sales Tax Rate."
+                        },
+                        "usual_supplier_id": {
+                            "type": "string",
+                            "description": "The ID of the Usual Supplier."
+                        },
+                        "purchase_tax_rate_id": {
+                            "type": "string",
+                            "description": "The ID of the Purchase Tax Rate."
+                        },
+                        "cost_price": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The cost price of the product"
+                        },
+                        "source_guid": {
+                            "type": "string",
+                            "description": "Used when importing products from external sources"
+                        },
+                        "purchase_description": {
+                            "type": "string",
+                            "description": "The product purchase description"
+                        },
+                        "active": {
+                            "type": "boolean",
+                            "description": "Indicates whether the product is active"
+                        },
+                        "catalog_item_type_id": {
+                            "type": "string",
+                            "description": "The ID of the Catalog Item Type."
+                        },
+                        "sales_prices": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "price_name": {
+                                        "type": "string",
+                                        "description": "The name of the product sales price"
+                                    },
+                                    "price": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The sales price amount"
+                                    },
+                                    "price_includes_tax": {
+                                        "type": "boolean",
+                                        "description": "Indicates whether the sales price already includes tax"
+                                    },
+                                    "product_sales_price_type_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Product Sales Price Type."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "product"
+            ],
+            "description": "Updates a Product"
+        }
+    }
+}

@@ -1,0 +1,416 @@
+{
+    "type": "object",
+    "properties": {
+        "key": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "sales_corrective_invoice": {
+                    "type": "object",
+                    "properties": {
+                        "contact_id": {
+                            "type": "string",
+                            "description": "The ID of the Contact."
+                        },
+                        "invoice_number_prefix": {
+                            "type": "string",
+                            "description": "The invoice number prefix"
+                        },
+                        "invoice_number": {
+                            "type": "string",
+                            "description": "The generated invoice number"
+                        },
+                        "contact_name": {
+                            "type": "string",
+                            "description": "The name of the contact when the invoice was created"
+                        },
+                        "contact_reference": {
+                            "type": "string",
+                            "description": "The reference of the contact when the invoice was created"
+                        },
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The date of the invoice"
+                        },
+                        "due_date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The due date of the invoice"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "description": "The reference for the invoice"
+                        },
+                        "notes": {
+                            "type": "string",
+                            "description": "Invoice notes"
+                        },
+                        "terms_and_conditions": {
+                            "type": "string",
+                            "description": "Invoice terms and conditions"
+                        },
+                        "shipping_net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net shipping amount"
+                        },
+                        "shipping_tax_rate_id": {
+                            "type": "string",
+                            "description": "The ID of the Shipping Tax Rate."
+                        },
+                        "shipping_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax shipping amount. NOTE: This is not required for POST/PUT requests as the shipping tax is calculated based on the shipping_net_amount and the shipping_tax_rate."
+                        },
+                        "shipping_total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total shipping amount"
+                        },
+                        "total_quantity": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total quantity of the invoice"
+                        },
+                        "net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net amount of the invoice"
+                        },
+                        "tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax amount of the invoice"
+                        },
+                        "total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total amount of the invoice"
+                        },
+                        "currency_id": {
+                            "type": "string",
+                            "description": "The ID of the Currency."
+                        },
+                        "exchange_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The exchange rate for the invoice"
+                        },
+                        "inverse_exchange_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The inverse exchange rate for the invoice"
+                        },
+                        "base_currency_shipping_net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net shipping amount in base currency"
+                        },
+                        "base_currency_shipping_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax shipping amount in base currency"
+                        },
+                        "base_currency_shipping_total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total shipping amount in base currency"
+                        },
+                        "total_discount_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The discount amount on the invoice"
+                        },
+                        "base_currency_total_discount_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The discount amount on the invoice in base currency"
+                        },
+                        "base_currency_net_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The net amount of the invoice in base currency"
+                        },
+                        "base_currency_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The tax amount of the invoice in base currency"
+                        },
+                        "base_currency_total_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total amount of the invoice in base currency"
+                        },
+                        "status_id": {
+                            "type": "string",
+                            "description": "The ID of the Status."
+                        },
+                        "sent": {
+                            "type": "boolean",
+                            "description": "Indicates whether the invoice has been sent"
+                        },
+                        "withholding_tax_rate": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "IRPF Witheld Tax Rate (Spain only)"
+                        },
+                        "withholding_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "IRPF Witheld Tax Amount (Spain only)"
+                        },
+                        "base_currency_withholding_tax_amount": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "IRPF Witheld Tax Amount (Spain only) in the base currency"
+                        },
+                        "corrective_reason_code_id": {
+                            "type": "string",
+                            "description": "The ID of the Corrective Reason Code."
+                        },
+                        "original_invoice_id": {
+                            "type": "string",
+                            "description": "The ID of the Original Invoice. (Spain only)"
+                        },
+                        "original_invoice_number": {
+                            "type": "string",
+                            "description": "The number relating to the original invoice"
+                        },
+                        "original_invoice_date": {
+                            "type": "string",
+                            "description": "The Invoice date relating to the original invoice"
+                        },
+                        "details": {
+                            "type": "string",
+                            "description": "The corrective invoice details"
+                        },
+                        "main_address": {
+                            "type": "object",
+                            "properties": {
+                                "address_line_1": {
+                                    "type": "string",
+                                    "description": "The first line of the address"
+                                },
+                                "address_line_2": {
+                                    "type": "string",
+                                    "description": "The second line of the address"
+                                },
+                                "city": {
+                                    "type": "string",
+                                    "description": "The address town/city"
+                                },
+                                "postal_code": {
+                                    "type": "string",
+                                    "description": "The address postal code/zipcode"
+                                },
+                                "country_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Country."
+                                },
+                                "address_type_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Address Type."
+                                },
+                                "region": {
+                                    "type": "string",
+                                    "description": "The address state/province/region"
+                                },
+                                "country_group_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Country Group."
+                                }
+                            }
+                        },
+                        "delivery_address": {
+                            "type": "object",
+                            "properties": {
+                                "address_line_1": {
+                                    "type": "string",
+                                    "description": "The first line of the address"
+                                },
+                                "address_line_2": {
+                                    "type": "string",
+                                    "description": "The second line of the address"
+                                },
+                                "city": {
+                                    "type": "string",
+                                    "description": "The address town/city"
+                                },
+                                "postal_code": {
+                                    "type": "string",
+                                    "description": "The address postal code/zipcode"
+                                },
+                                "country_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Country."
+                                },
+                                "address_type_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Address Type."
+                                },
+                                "region": {
+                                    "type": "string",
+                                    "description": "The address state/province/region"
+                                },
+                                "country_group_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Country Group."
+                                }
+                            }
+                        },
+                        "invoice_lines": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "description": {
+                                        "type": "string",
+                                        "description": "The description for the invoice line"
+                                    },
+                                    "product_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Product."
+                                    },
+                                    "service_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Service."
+                                    },
+                                    "ledger_account_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Ledger Account."
+                                    },
+                                    "trade_of_asset": {
+                                        "type": "boolean",
+                                        "description": "Whether the line item is marked as trade of asset."
+                                    },
+                                    "quantity": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The quantity for the invoice line"
+                                    },
+                                    "unit_price": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The unit price for the invoice line"
+                                    },
+                                    "net_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The net amount for the invoice line"
+                                    },
+                                    "tax_rate_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Tax Rate."
+                                    },
+                                    "tax_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The tax amount for the invoice line\". This attribute is required in v3.1, unless the tax rate is of a \"zero\", \"exempt\" or \"no_tax\" type. Then the tax_amount is infered as 0.0. In v3, this attribute is optional, but you should still set, as it defaults to 0.0 in any case. This is not what you want for tax rates with a percentage > 0.0."
+                                    },
+                                    "total_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The total amount for the invoice line"
+                                    },
+                                    "base_currency_unit_price": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The unit price for the invoice line in base currency"
+                                    },
+                                    "unit_price_includes_tax": {
+                                        "type": "boolean",
+                                        "description": "Defines whether the unit price includes tax"
+                                    },
+                                    "base_currency_net_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The net amount for the invoice line in base currency"
+                                    },
+                                    "base_currency_tax_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The tax amount for the invoice line in base currency"
+                                    },
+                                    "base_currency_total_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The total amount for the invoice line in base currency"
+                                    },
+                                    "eu_goods_services_type_id": {
+                                        "type": "string",
+                                        "description": "The ID of the EU Goods Services Type."
+                                    },
+                                    "discount_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The discount amount for the invoice line"
+                                    },
+                                    "base_currency_discount_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The discount amount for the invoice line in base currency"
+                                    },
+                                    "discount_percentage": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The discount percentage for the invoice line"
+                                    },
+                                    "eu_sales_description_id": {
+                                        "type": "string",
+                                        "description": "The ID of the EU Sales Description."
+                                    }
+                                }
+                            }
+                        },
+                        "tax_analysis": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "tax_rate_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Tax Rate."
+                                    },
+                                    "net_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The net amount for the tax rate"
+                                    },
+                                    "tax_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The tax amount for the tax rate"
+                                    },
+                                    "total_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The total amount for the tax rate"
+                                    },
+                                    "goods_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The total amount for the tax rate relating to goods"
+                                    },
+                                    "service_amount": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The total amount for the tax rate relating to services"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "sales_corrective_invoice"
+            ],
+            "description": "Updates a Sales Corrective Invoice"
+        }
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "object",
+                    "properties": {
+                        "address_type_id": {
+                            "type": "string",
+                            "description": "Defines the nature of the address (Shipping, Billing, Head Office etc.).<br>Start defaults to \"Sales\" for Customers and \"Purchasing\" for Vendors"
+                        },
+                        "name": {
+                            "type": "string",
+                            "description": "The custom name of the address"
+                        },
+                        "is_main_address": {
+                            "type": "boolean",
+                            "description": "Specifies the address as the contact's main address. Only a single address can exist for a contact in Start so this is always true when returned by the API but cannot be seen in the UI"
+                        },
+                        "address_line_1": {
+                            "type": "string",
+                            "description": "The first line of the address"
+                        },
+                        "address_line_2": {
+                            "type": "string",
+                            "description": "The second line of the address"
+                        },
+                        "city": {
+                            "type": "string",
+                            "description": "The address town/city"
+                        },
+                        "postal_code": {
+                            "type": "string",
+                            "description": "The address postal code/zipcode"
+                        },
+                        "country_id": {
+                            "type": "string",
+                            "description": "The ID of the Country."
+                        },
+                        "bank_account_id": {
+                            "type": "string",
+                            "description": "The related bank account of the address, if the address belongs to a bank account."
+                        },
+                        "contact_id": {
+                            "type": "string",
+                            "description": "The related contact of the address, if the address belongs to a contact."
+                        },
+                        "region": {
+                            "type": "string",
+                            "description": "The address state/province/region"
+                        },
+                        "country_group_id": {
+                            "type": "string",
+                            "description": "The ID of the Country Group."
+                        }
+                    },
+                    "required": [
+                        "address_type_id",
+                        "name",
+                        "is_main_address"
+                    ]
+                }
+            },
+            "required": [
+                "address"
+            ],
+            "description": "Creates a Address"
+        }
+    }
+}

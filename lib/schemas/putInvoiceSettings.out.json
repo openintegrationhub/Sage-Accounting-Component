@@ -1,0 +1,306 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "invoice_settings": {
+                    "type": "object",
+                    "properties": {
+                        "next_invoice_number": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The next invoice number",
+                            "minimum": 1,
+                            "maximum": 999999999
+                        },
+                        "next_credit_note_number": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The next credit note number",
+                            "minimum": 1,
+                            "maximum": 999999999
+                        },
+                        "separate_invoice_credit_note_numbering": {
+                            "type": "boolean",
+                            "description": "Indicates whether to use separate or combined number sequences for invoices and credit notes"
+                        },
+                        "sales_invoice_number_prefix": {
+                            "type": "string",
+                            "description": "The prefix to use for sales invoices"
+                        },
+                        "sales_credit_note_number_prefix": {
+                            "type": "string",
+                            "description": "The prefix to use for sales credit notes"
+                        },
+                        "invoice_terms_and_conditions": {
+                            "type": "string",
+                            "description": "The default terms and conditions to include on invoices"
+                        },
+                        "default_note_on_invoice": {
+                            "type": "string",
+                            "description": "The default notes to include on invoices"
+                        },
+                        "default_note_on_credit_note": {
+                            "type": "string",
+                            "description": "The default notes to include on credit notes"
+                        },
+                        "next_quote_number": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The next quote number",
+                            "minimum": 1,
+                            "maximum": 999999999
+                        },
+                        "quote_number_prefix": {
+                            "type": "string",
+                            "description": "The prefix to use for sales quotes"
+                        },
+                        "estimate_number_prefix": {
+                            "type": "string",
+                            "description": "The prefix to use for sales estimates"
+                        },
+                        "quote_default_days_to_expiry": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The default number of days before quotes expire",
+                            "minimum": 0,
+                            "maximum": 365
+                        },
+                        "estimate_default_days_to_expiry": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The default number of days before estimates expire",
+                            "minimum": 0,
+                            "maximum": 365
+                        },
+                        "quote_terms_and_conditions": {
+                            "type": "string",
+                            "description": "The default terms and conditions to include on quotes"
+                        },
+                        "estimate_terms_and_conditions": {
+                            "type": "string",
+                            "description": "The default terms and conditions to include on estimates"
+                        },
+                        "delivery_note_terms_and_conditions": {
+                            "type": "string",
+                            "description": "The default terms and conditions to include on delivery notes"
+                        },
+                        "delivery_note_show_signature": {
+                            "type": "boolean",
+                            "description": "Indicates whether to include the signature lines on delivery notes"
+                        },
+                        "delivery_note_show_picked": {
+                            "type": "boolean",
+                            "description": "Indicates whether to include the picked column on delivery notes"
+                        },
+                        "delivery_note_show_notes": {
+                            "type": "boolean",
+                            "description": "Indicates whether to include the document notes on delivery notes"
+                        },
+                        "delivery_note_show_contact_details": {
+                            "type": "boolean",
+                            "description": "Indicates whether to include contact details on delivery notes"
+                        },
+                        "quick_entry_prefix": {
+                            "type": "string",
+                            "description": "The prefix to use for quick entries"
+                        },
+                        "late_payment_percentage": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The percentage charge applied to late payment of invoices (France only)"
+                        },
+                        "prompt_payment_percentage": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The percentage applied to late payment of invoices (France only)"
+                        },
+                        "show_auto_entrepreneur": {
+                            "type": "boolean",
+                            "description": "Indicates whether to include auto entrepreneur details on invoices (France only)"
+                        },
+                        "show_insurance": {
+                            "type": "boolean",
+                            "description": "Indicates whether to include insurance details on invoices (France only)"
+                        },
+                        "insurer_id": {
+                            "type": "string",
+                            "description": "The ID of the Insurer. (France only)"
+                        },
+                        "insurance_area": {
+                            "type": "string",
+                            "description": "The insurance area to be displayed on invoices (France only)"
+                        },
+                        "insurance_type": {
+                            "type": "string",
+                            "description": "The insurance type to be displayed on invoices (France only)"
+                        },
+                        "insurance_text": {
+                            "type": "string",
+                            "description": "The insurance mention to be displayed on invoices (France only)"
+                        },
+                        "payment_bank_account_id": {
+                            "type": "string",
+                            "description": "The ID of the Payment Bank Account."
+                        },
+                        "sales_corrective_invoice_number_prefix": {
+                            "type": "string",
+                            "description": "The sales corrective invoice number prefix (Spain only)"
+                        },
+                        "next_sales_corrective_invoice_number": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The next sales corrective invoice number",
+                            "minimum": 1,
+                            "maximum": 2147483647
+                        },
+                        "customer_credit_days": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The default delay within which the business' customer has to pay an invoice\nPrefer the (customer) contact's attribute 'credit_days' over this setting\nto calculate an invoice's date of payment; only if null, use this as default.\n",
+                            "minimum": 0,
+                            "maximum": 365
+                        },
+                        "vendor_credit_days": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "The default delay within which the business has to pay any vendor's invoice\nPrefer the specific (vendor) contact's attribute 'credit_days' over this setting;\nonly if null, use this as default.\n",
+                            "minimum": 0,
+                            "maximum": 365
+                        },
+                        "document_headings": {
+                            "type": "object",
+                            "properties": {
+                                "sales_invoice": {
+                                    "type": "string",
+                                    "description": "The customisable sales invoice document header"
+                                },
+                                "sales_credit_note": {
+                                    "type": "string",
+                                    "description": "The customisable sales credit note document header"
+                                },
+                                "sales_corrective_invoice": {
+                                    "type": "string",
+                                    "description": "The customisable sales corrective invoice document header"
+                                },
+                                "sales_quote": {
+                                    "type": "string",
+                                    "description": "The customisable sales quote document header"
+                                },
+                                "sales_estimate": {
+                                    "type": "string",
+                                    "description": "The customisable sales estimate document header"
+                                },
+                                "pro_forma": {
+                                    "type": "string",
+                                    "description": "The customisable pro forma document header"
+                                },
+                                "remittance_advice": {
+                                    "type": "string",
+                                    "description": "The customisable remittance advice document header"
+                                },
+                                "statement": {
+                                    "type": "string",
+                                    "description": "The customisable statement document header"
+                                },
+                                "delivery_note": {
+                                    "type": "string",
+                                    "description": "The customisable delivery note document header"
+                                }
+                            }
+                        },
+                        "line_item_titles": {
+                            "type": "object",
+                            "properties": {
+                                "description": {
+                                    "type": "string",
+                                    "description": "The user defined description column title"
+                                },
+                                "unit_price": {
+                                    "type": "string",
+                                    "description": "The user defined unit price column title"
+                                },
+                                "quantity": {
+                                    "type": "string",
+                                    "description": "The user defined quantity column title"
+                                },
+                                "discount": {
+                                    "type": "string",
+                                    "description": "The user defined discount column title"
+                                }
+                            }
+                        },
+                        "footer_details": {
+                            "type": "object",
+                            "properties": {
+                                "column_1": {
+                                    "type": "string",
+                                    "description": "The pdf footer details for column 1"
+                                },
+                                "column_2": {
+                                    "type": "string",
+                                    "description": "The pdf footer details for column 2"
+                                },
+                                "column_3": {
+                                    "type": "string",
+                                    "description": "The pdf footer details for column 3"
+                                }
+                            }
+                        },
+                        "print_contact_details": {
+                            "type": "object",
+                            "properties": {
+                                "business_name": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether business name is printed on the invoice"
+                                },
+                                "website": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether website is printed on the invoice"
+                                },
+                                "telephone": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether telephone is printed on the invoice"
+                                },
+                                "mobile": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether mobile is printed on the invoice"
+                                },
+                                "email_address": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether email address is printed on the invoice"
+                                },
+                                "due_date": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether due date is printed on the invoice"
+                                },
+                                "default_delivery_address": {
+                                    "type": "string",
+                                    "description": "Indicates which contact address is used for the delivery address of the invoice. Valid options are: INVOICE_ADDRESS, CONTACT_DELIVERY_ADDRESS, NONE."
+                                }
+                            }
+                        },
+                        "print_statements": {
+                            "type": "object",
+                            "properties": {
+                                "days_overdue": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether days of overdue are printed in the contact's statement"
+                                },
+                                "table_of_balances": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether table of balances is printed in the contact's statement"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "invoice_settings"
+            ],
+            "description": "Updates a Invoice Settings"
+        }
+    }
+}

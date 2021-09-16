@@ -1,0 +1,103 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "journal": {
+                    "type": "object",
+                    "properties": {
+                        "date": {
+                            "type": "string",
+                            "format": "date",
+                            "description": "The date of the journal"
+                        },
+                        "reference": {
+                            "type": "string",
+                            "description": "A reference for the journal"
+                        },
+                        "description": {
+                            "type": "string",
+                            "description": "A description of the journal"
+                        },
+                        "total": {
+                            "type": "number",
+                            "format": "double",
+                            "description": "The total for the journal"
+                        },
+                        "journal_code": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "description": "The name of the journal code"
+                                },
+                                "code": {
+                                    "type": "string",
+                                    "description": "The code of the journal code"
+                                },
+                                "journal_code_type_id": {
+                                    "type": "string",
+                                    "description": "The ID of the Journal Code Type."
+                                },
+                                "control_name": {
+                                    "type": "string",
+                                    "description": "The control name of the journal code\n\nControl names are identifiers for a journal codes with a specific meaning. Some examples are `AC` for\npurchases, `VE` for sales, `OD` for other transactions and `REPBAL` for opening balances.\n"
+                                },
+                                "reserved": {
+                                    "type": "boolean",
+                                    "description": "Indicates whether the journal code is reserved.\n\nReserved journal codes cannot be deleted. A journal code is reserved when it has a control name.\nPlease note that journal codes can also not be deleted when there is any journal that is using\nthe code.\n"
+                                }
+                            }
+                        },
+                        "journal_lines": {
+                            "type": "array",
+                            "description": "The journal lines",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "ledger_account_id": {
+                                        "type": "string",
+                                        "description": "The ID of the Ledger Account."
+                                    },
+                                    "debit": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The debit amount of the journal line"
+                                    },
+                                    "credit": {
+                                        "type": "number",
+                                        "format": "double",
+                                        "description": "The credit amount of the journal line"
+                                    },
+                                    "details": {
+                                        "type": "string",
+                                        "description": "A description of the journal line"
+                                    },
+                                    "include_on_tax_return": {
+                                        "type": "boolean",
+                                        "description": "Indicates whether the journal line should affect the tax return"
+                                    }
+                                },
+                                "required": [
+                                    "ledger_account_id",
+                                    "debit",
+                                    "credit"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "date",
+                        "reference",
+                        "journal_lines"
+                    ]
+                }
+            },
+            "required": [
+                "journal"
+            ],
+            "description": "Creates a Journal"
+        }
+    }
+}

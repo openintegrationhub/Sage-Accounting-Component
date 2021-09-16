@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "search": {
+            "required": false,
+            "type": "string"
+        },
+        "updated_or_created_since": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "deleted_since": {
+            "required": false,
+            "type": "string",
+            "format": "date-time"
+        },
+        "active": {
+            "required": false,
+            "type": "boolean"
+        },
+        "items_per_page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "minimum": 1,
+            "maximum": 200,
+            "default": 20
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32",
+            "default": 1
+        },
+        "attributes": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

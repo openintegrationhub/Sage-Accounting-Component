@@ -1,18 +1,1 @@
-{
-    "type": "object",
-    "properties": {
-        "key": {
-            "required": true,
-            "type": "string"
-        },
-        "date": {
-            "required": false,
-            "type": "string",
-            "format": "date"
-        },
-        "attributes": {
-            "required": false,
-            "type": "string"
-        }
-    }
-}
+{}
